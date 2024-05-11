@@ -105,18 +105,42 @@
   
                       <div class="d-flex justify-content-between">
                         <p class="mb-2">Subtotal</p>
-                        <p class="mb-2">$465465456</p>
+                        <p class="mb-2">$900</p>
                       </div>
   
                       <div class="d-flex justify-content-between">
-                        <p class="mb-2">Envio</p>
-                        <p class="mb-2">$10</p>
+                        <p id="textoMostrado1" class="mb-2"></p>
                       </div>
-  
-                      <div class="d-flex justify-content-between mb-4">
-                        <p class="mb-2">Total(Incl.IVA)</p>
-                        <p class="mb-2">$910</p>
+                      <div class="d-flex justify-content-between ">
+                        <p id="textoMostrado2" class="mb-2"></p>
                       </div>
+                      <button id="boton1" class="boton">Envio</button>
+                      <button id="boton2" class="boton">Retirar en tienda</button>
+                    
+                      <script>
+                        const boton1 = document.getElementById('boton1');
+                        const boton2 = document.getElementById('boton2');
+                        const textoMostrado1 = document.getElementById('textoMostrado1');
+                        const textoMostrado2 = document.getElementById('textoMostrado2');
+                    
+                        const numeroFijo = 10; // Número fijo que deseas mostrar en el texto
+                        const numer=900;
+                        const totala=910;
+                        boton1.addEventListener('click', function() {
+                          boton1.classList.toggle('boton-activo');
+                          boton2.classList.remove('boton-activo');
+                          textoMostrado1.textContent = "Envio: $"+ numeroFijo;
+                          textoMostrado2.textContent = "Total: $"+ totala;
+                        });
+                    
+                        boton2.addEventListener('click', function() {
+                          boton2.classList.toggle('boton-activo');
+                          boton1.classList.remove('boton-activo');
+                          textoMostrado1.textContent = "Retiro en tienda: Viña del mar"; // Vaciar el otro texto
+                          textoMostrado2.textContent = "Total: " + numer;
+                        });
+                      </script>
+
   
                           <!-- Button trigger modal -->
                           <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" style="text-align:right">
