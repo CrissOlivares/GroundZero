@@ -35,5 +35,8 @@ document.getElementById('validationCustom02').addEventListener('input', function
     // Obtiene solo los dígitos numéricos del valor actual del campo, eliminando todos los caracteres que no sean dígitos de la cadena
     var input = target.value.replace(/\D/g, '');
     // Si el valor es un número de tarjeta de crédito válido (16 dígitos), lo formatea
-   
+    if (/^\d{16}$/.test(input)) {
+        var formattedInput = input.replace(/(\d{4})/g, '$1 ');
+        target.value = formattedInput.trim();
+    }
 });
