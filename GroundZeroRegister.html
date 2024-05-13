@@ -39,8 +39,14 @@
   </div>
   <!-- fin register -->
   <script src="./js/bootstrap.bundle.min.js"></script>
-  <!-- javaScript code -->
 
+  <!-- javaScript code Poppover-->
+  <script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+  </script>
 
   <!-- Intento de Validación (No Refleja Datos en Consola)-->
   <script>
