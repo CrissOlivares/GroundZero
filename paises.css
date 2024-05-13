@@ -1,0 +1,37 @@
+/* Estilos para el contenedor de países */
+#countries {
+    display: grid;
+    /* definir el tamaño y el número de columnas en un contenedor de grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px;
+  }
+  
+  /* Estilos para cada país */
+  .pais {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilos para el título del país */
+  .pais h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Estilos para los detalles del país */
+  .pais p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Estilos para la imagen de la bandera */
+  .pais img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
